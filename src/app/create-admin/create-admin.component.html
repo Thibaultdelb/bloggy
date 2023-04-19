@@ -1,0 +1,30 @@
+<form #addPostForm="ngForm" (ngSubmit)="createPost(addPostForm)">
+  <div class="form-group">
+    <label for="Posttitle">Titre du post</label>
+    <input ngModel name="titre" type="text" class="form-control" id="Posttitle" aria-describedby="emailHelp" placeholder="Enter your post title">
+  </div>
+
+  <div class="form-group">
+    <label for="idAuthor">Auteur du post</label>
+    <select ngModel name="idAuthor" class="form-control" id="idAuthor" aria-describedby="emailHelp">
+      <option *ngFor="let author of authors" [value]="author.id">{{author.full_name}}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="Postimage">Image</label>
+    <input  ngModel name="image" type="text" class="form-control" id="Postimage" aria-describedby="emailHelp" placeholder="Enter post image">
+  </div>
+
+  <div class="form-group">
+    <label for="Postresume">Résumé du post</label>
+    <input  ngModel name="resume" type="text" class="form-control" id="Postresume" aria-describedby="emailHelp" placeholder="Enter your resume">
+  </div>
+
+  <div class="form-group">
+    <label for="Postcontent">Post Contentu</label>
+    <input  ngModel name="contetu" type="text" class="form-control" id="Postcontent" aria-describedby="emailHelp" placeholder="Enter post content">
+  </div>
+
+  <button type="submit" class="btn btn-primary">créer</button>
+</form>

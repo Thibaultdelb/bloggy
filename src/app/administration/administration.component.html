@@ -1,0 +1,20 @@
+<h2 align="center">Administration page</h2>
+
+
+<button class="btn btn-success" (click)="createPost()" align="right">Create Post</button>
+<button class="btn btn-success" (click)="bloggy()">post page</button>
+
+<table align="center" border="1" class="table">
+  <tr><th>ID</th><th>image</th><th>Title</th><th>Auteur</th><th>Date</th><th>Détails</th><th>Mise à jour des posts</th><th>supprimer</th></tr>
+  <tr *ngFor="let post of posts">
+    <td>{{post.id}}</td>
+    <td><img src="{{post.image_url}}" width="100px"></td>
+    <td>{{post.title}}</td>
+    <td>{{post.full_name}}</td>
+    <td>{{post.created_at}}</td>
+    <td><button class="bg-primary" (click)="detailsPosts(post.id)">Details</button></td>
+    <td><button class="bg-warning" (click)="editPost(post.id)">Mise à jour</button></td>
+    <td><button class="bg-danger" (click)="deletePost(post.id)">Supprimer</button></td>
+  </tr>
+</table>
+<router-outlet></router-outlet>

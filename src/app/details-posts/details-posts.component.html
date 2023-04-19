@@ -1,0 +1,25 @@
+<h2 align="center" >Détails du Post: {{post.id}}</h2>
+
+<table  class="table" border="1" align="center">
+  <tr>
+    <h3 align="center" >Titre: </h3>
+  </tr>
+  <tr align="center" >
+    <th >{{post?.title}}</th>
+  </tr>
+  <tr align="center" >
+    <th>Auteur du post: {{post.full_name}}</th>
+  </tr>
+  <tr>
+    <td align="center" > <img src="{{post.image_url}}" width="400px"></td>
+  </tr>
+  <tr align="center" >
+    <th>Date de création: {{post.created_at}}</th>
+  </tr>
+  <tr align="center" >
+    <th>Résumé du post: {{post.resume}}</th>
+  </tr>
+  <tr align="center" >
+    <th>Contenu: {{post.content}}</th>
+  </tr>
+</table>
